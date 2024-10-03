@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(153, 153, 109);
+}
+.container{
+    display: grid;
+    height: 300px;
+    width: 1000px;
+    border: 2px solid red;
+    grid-template-columns:repeat(12,1fr);
+}
+.row1,.row2,.row3{
+    border: 1px dotted rgb(80, 102, 27);
+}
+.row1{
+    grid-column-start: 3;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: rgb(92, 50, 71);
+
+}
