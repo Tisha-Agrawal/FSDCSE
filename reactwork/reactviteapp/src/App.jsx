@@ -1,8 +1,9 @@
 import React from 'react'
 import Student from './Student';
 import UseStudentState from './UseStudentState';
-
-
+import Imagemanipulation from './ImageManipulation';
+import MyUseEffect from './MyUseEffect';
+import UseFetchAPI from './UseFetchAPI';
   function App(){
     const h1=<h1>Hello World</h1>;
     const mystyle={
@@ -10,40 +11,40 @@ import UseStudentState from './UseStudentState';
       backgroundColor:'yellow'
 
     }
-  const studentData=[
-    {
-    college:"ABES Engineering College",
-    name:"Tisha Agrawal",
-    branch:"CSE",
-    roll:"2200320100179",
-    section:"B"},
+  // const studentData=[
+  //   {
+  //   college:"ABES Engineering College",
+  //   name:"Tisha Agrawal",
+  //   branch:"CSE",
+  //   roll:"2200320100179",
+  //   section:"B"},
 
-    {
-    college:"ABES Engineering College",
-    name:"Mona Agrawal",
-    branch:"CSE",
-    roll:"2200320100179",
-    section:"B"
-  },
-  {
-    college:"ABES Engineering College",
-    name:"Chandan Agrawal",
-    branch:"CSE",
-    roll:"2200320100179",
-    section:"B"
-  }
-  ]
+  //   {
+  //   college:"ABES Engineering College",
+  //   name:"Mona Agrawal",
+  //   branch:"CSE",
+  //   roll:"2200320100179",
+  //   section:"B"
+  // },
+  // {
+  //   college:"ABES Engineering College",
+  //   name:"Chandan Agrawal",
+  //   branch:"CSE",
+  //   roll:"2200320100179",
+  //   section:"B"
+  // }
+  // ]
 
   
     
   
   return (
-    <div>
-      <h2>Hello</h2>
-      <div>
-        <UseStudentState/>
-     </div>
-    </div>
+    // <div>
+    //   <h2>Hello</h2>
+    //   <div>
+    //     <UseStudentState/>
+    //  </div>
+    // </div>
     /*{ <div style={{backgroundColor:'beige'}}>{h1}
     <div style={mystyle}>
       ABES Engineering College
@@ -86,8 +87,20 @@ import UseStudentState from './UseStudentState';
         /> }*/
       // </div>
       // </div>
+      <div>
+      <h2>Hello using stateHook</h2>
+      <div>
+{/*        
+        <Imagemanipulation/> */}
+        <UseFetchAPI/>
+      </div>
+    </div>
+    )
+   
 
-  )
+
+  
 }
+
 
 export default App
