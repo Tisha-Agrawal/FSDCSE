@@ -1,22 +1,43 @@
 import React,{useState} from 'react'
 
 function UseFetchAPI(){
-    const response = fetch("https://dummyjson.com/recipes")
     const [data,setData]=useState([])
-    response.then((res)=>{
-        console.log(res)
+    function getData(){
+
+        const response = fetch("https://dummyjson.com/recipes")
+        response.then((res)=>{
+            console.log(res)
         res.json().then((data)=>{
             console.log(data)
-            setData(data)
+            setData(data.recipes)
         })
     })
     .catch((error)=>{
         console.log(error)
     })
+}
     return (
-        <div>UseFetchAPI 
-            {JSON.stringify(data)}
+        
+        <div>UseFetchAPI {
+            
+            
+            data.map((ele)=>{
+            console.log(data);
+            
+                return(
+                    <div style={{}}>
+                    <div><img src={ele.image} height={100} width={100}/></div>
+                    <div>{ele.name}</div>
+                    <div>{ele.ingredients}</div>
+                    </div>
+
+                        )
+                    }
+                )
+            }
+            <button onClick={getData}>Get data</button>
         </div>
+            
 
     )
 }

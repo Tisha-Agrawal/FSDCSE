@@ -4,6 +4,7 @@ import UseStudentState from './UseStudentState';
 import Imagemanipulation from './ImageManipulation';
 import MyUseEffect from './MyUseEffect';
 import UseFetchAPI from './UseFetchAPI';
+import Login from './Login';
   function App(){
     const h1=<h1>Hello World</h1>;
     const mystyle={
@@ -92,7 +93,8 @@ import UseFetchAPI from './UseFetchAPI';
       <div>
 {/*        
         <Imagemanipulation/> */}
-        <UseFetchAPI/>
+        {/* <UseFetchAPI/> */}
+        <Login/>
       </div>
     </div>
     )
