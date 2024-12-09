@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Student from './Student';
 import UseStudentState from './UseStudentState';
 import Imagemanipulation from './ImageManipulation';
 import MyUseEffect from './MyUseEffect';
 import UseFetchAPI from './UseFetchAPI';
 import Login from './Login';
+import Registration from './Registration';
   function App(){
+    const[rdata,setrdata]=useState();
     const h1=<h1>Hello World</h1>;
     const mystyle={
       color:'red',
@@ -89,12 +91,21 @@ import Login from './Login';
       // </div>
       // </div>
       <div>
+        <div>
+          {JSON.stringify(rdata)}
+        </div>
       <h2>Hello using stateHook</h2>
       <div>
 {/*        
         <Imagemanipulation/> */}
         {/* <UseFetchAPI/> */}
-        <Login/>
+        {/* <Login/> */}
+        <Registration regData={setrdata}/>
+        <div>
+          <h2>Login Form</h2>
+          <Login regData={rdata}/>
+        </div>
+        
       </div>
     </div>
     )
