@@ -2,18 +2,19 @@ import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
-
-function Login({regData}) {
+import { useNavigate} from 'react-router-dom'
+function Login({regdata}) {
 const[email,setEmail]=useState()
 const[password,setPassword]=useState()
+const navigate=useNavigate();
 
-  function verification(e){
-    e.preventDefault()
-      // alert(email);
-      // alert(password);
-      console.log(regData.email);
-      if(email==regData.email){
+  function verification(){
+      //alert(email);
+      //alert(password);
+      if(email==regdata.email){
         alert("user is valid");
+        navigate('/dashboard');
+
       }
       else{
         alert("user is invalid");
@@ -22,7 +23,7 @@ const[password,setPassword]=useState()
   
   
     return (
-    <div>
+    <div style={{boxShadow:'20px 20px 20px 20px grey '}}>
         {email}
       <form>
   <div class="form-group">
