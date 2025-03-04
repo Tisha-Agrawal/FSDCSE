@@ -1,0 +1,1 @@
+WelcomeHi,data is appended using fs module
